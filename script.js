@@ -42,6 +42,7 @@ function createCactus() {
     const cactus = document.createElement('div');
     let cactusPosition = 1000;
     let randomTime = Math.random() * 6000;
+    let speed = 10;
 
     cactus.classList.add('cactus');
     cactus.style.left = 1000 + 'px';
@@ -56,8 +57,8 @@ function createCactus() {
             clearInterval(leftInterval);
             document.body.innerHTML = '<h1 class="game-over">Fim de Jogo</h1>';
         }else{
-            cactusPosition -= 10;
-            cactus.style.left = cactusPosition + 'px'; 
+            cactusPosition -= speed;
+            cactus.style.left = cactusPosition + 'px';
         }
 
     }, 20)
